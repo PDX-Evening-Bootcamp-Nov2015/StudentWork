@@ -5,33 +5,10 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
-# list = []
-# def fibGenerator():
-#     a, b = 0, 1
-#     yield 0
-#     while True:
-#         a, b = b, a + b
-#         yield a
-for x in range(4,000,000)
 
-# print(fibGenerator())
-
-#     for num in yield %2 == 0:
-#         return num
-#         list.append(num)
-#
-# print(a)
-
-#
-def fib_gen():
-    num = 0
-    num2 = 1
+def fibGenerator():
+    a, b = 0, 1
+    yield 0
     while True:
-        fib = num + num2
-        yield fib
-        num, num2 = num2, num + 1
-
-fibs = fib_gen()
-
-for x in range(20):
-    print(next(fibs))
+        a, b = b, a + b
+        yield a

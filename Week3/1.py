@@ -2,12 +2,3 @@
 #  3, 5, 6 and 9. The sum of these multiples is 23.
 #
 # Find the sum of all the multiples of 3 or 5 below 1000.
-
-list = []
-
-for num in range(1000):
-    if num % 3 == 0 or num % 5 == 0:
-        list.append(num)
-
-print(sum(list))
-print(num)

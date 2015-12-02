@@ -1,4 +1,5 @@
-# create a function that when provided with a triplet, returns the index of the numerical element that lies 
+# create a function that when provided with a triplet, returns the index of
+#the numerical element that lies
 # between the other two elements.
 #
 # The input to the function will be an list of three distinct numbers.
@@ -6,9 +7,18 @@
 # For example:
 #
 # gimme([2, 3, 1]) => 0
-# 2 is the number that fits between 1 and 3 and the index of 2 in the input array is 0.
+# 2 is the number that fits between 1 and 3 and the index of 2 in the input
+# array is 0.
 #
 # Another example (just to make sure it is clear):
 #
 # gimme([5, 10, 14]) => 1
-# 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
+# 10 is the number that fits between 5 and 14 and the index of 10 in the
+# input array is 1.
+
+#FIRST - Return the integer that is neither the largest nor the smallest
+#NEXT - Return the index of that middle interger where is lies in the list
+def middle(x,y,z):
+    for range():
+        return y
+print(middle(8, 3, 2))

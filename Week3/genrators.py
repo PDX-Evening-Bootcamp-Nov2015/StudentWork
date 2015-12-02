@@ -4,7 +4,7 @@ def fib_gen():
     while True:
         fib = num + num2
         yield fib
-        num, num2 = num2, num + 1
+        num, num2 = num2, num 
 
 fibs = fib_gen()
 
