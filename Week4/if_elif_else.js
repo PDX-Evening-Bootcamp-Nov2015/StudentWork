@@ -2,7 +2,7 @@ import time          # includes a library named time
 import random        # a random library
 
 
-var name = input('Hi... what is your name? ')
+var name = ('Skip')
 console.log();
 
 if name === 'Charles' or name == 'Skip':
