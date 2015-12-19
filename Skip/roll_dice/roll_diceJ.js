@@ -7,7 +7,7 @@
 
 // math.random is built-in
 
-
+ 
 window.onload = function() {
     document.getElementById("roll").onclick = makeRoll;
 };
