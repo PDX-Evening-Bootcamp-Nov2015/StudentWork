@@ -31,3 +31,9 @@ h1 {
 .dice_area {
   text-align: center;
 }
+
+/* dice styles */
+img.held {
+  border: 2px dotted #CC6635;
+  border-radius: 0.5rem;
+}
