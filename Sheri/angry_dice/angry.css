@@ -1,0 +1,31 @@
+.big {
+  border:1px solid navy;
+  background-color: #0088cc;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 50px;
+}
+.lessBig {
+  text-align: center;
+}
+h2 {
+
+}
+h1{
+
+}
+.diceDiv {
+margin-left:auto;
+margin-right:auto;
+width: 210px;
+}
+
+.dieDiv {
+  display: inline-block;
+  height:100px;
+  width: 100px;
+}
+.dieDiv img {
+  border-radius: 20px;
+}
