@@ -1,0 +1,13 @@
+
+tbody {
+  max-width: 40%;
+}
+
+tr {
+  max-width: 50%;
+}
+
+td {
+  max-width: 85px;
+  padding: 5px;
+}

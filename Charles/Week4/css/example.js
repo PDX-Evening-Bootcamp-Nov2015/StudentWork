@@ -59,13 +59,13 @@
 //
 // console.log(reverseString('hello'));
 
-function factorialize(num) {
-  var nume = 1;
-  for (i = 1; i < num +1; i+=1) {
-    console.log(i);
-    nume = i * nume;
-  }
-  console.log(nume);
-  return nume;
-}
-factorialize(5);
+// function factorialize(num) {
+//   var nume = 1;
+//   for (i = 1; i < num +1; i+=1) {
+//     console.log(i);
+//     nume = i * nume;
+//   }
+//   console.log(nume);
+//   return nume;
+// }
+// factorialize(5);
