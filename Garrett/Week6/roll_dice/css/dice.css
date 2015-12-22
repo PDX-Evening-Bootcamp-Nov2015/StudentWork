@@ -1,0 +1,36 @@
+h1 {
+    text-align:center;
+    text-transform: uppercase;
+}
+
+body {
+    background-color:#00394C;
+    font-family: sans-serif;
+}
+.content {
+    background-color:white;
+    border-radius:10px;
+    display: block;
+    max-width: 40%;
+    padding: 16px 32px;
+}
+
+.d1, .d2 {
+	text-align: center;
+	width: 50%;
+	display: inline-block;
+}
+
+input {
+	clear: both;
+	text-align: center;
+}
+
+#theTable {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
