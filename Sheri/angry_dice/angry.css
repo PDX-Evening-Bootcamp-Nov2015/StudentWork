@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro);
+
 .big {
   border:1px solid navy;
   background-color: #0088cc;
@@ -10,10 +12,10 @@
   text-align: center;
 }
 h2 {
-
+  font-family: 'Source Sans Pro', sans-serif;
 }
 h1{
-
+  font-family: 'Montserrat', sans-serif;
 }
 .diceDiv {
 margin-left:auto;
