@@ -44,8 +44,16 @@ function Game(){
     2 : [3, 4],
     3 : [5, 6]
   };
-  // function to hold a specific die
-  this.hold = function () {
+
+  // function to hold a die
+  this.hold = function(dieIndex){
+    var clickedDie = this.dice[dieIndex].val,
+        validStageHolds = this.validHolds[this.stage],
+        dieImg = get;
+  };
+
+  // function to determine which die was clicked and hold
+  this.clickHold = function () {
     var clickedImg = event.target,
         dieIndex = parseInt(clickedImg.id.charAt(3)),
         clickedDie = this.dice[dieIndex].val,
@@ -175,6 +183,15 @@ function Game(){
     // display the stage state
     this.updateStage();
   };
+
+  // function to parse key presses and perform appropriate action
+  this.parseKey = function(){
+    var key = event.keyCode;
+    // if spacebar roll the dice
+    if (key === 32) {
+      this.roll();
+    }
+  };
 }
 
 window.onload = function(){
@@ -188,7 +205,10 @@ window.onload = function(){
   rollButton.addEventListener('click', function(){
     theGame.roll();
   }, false);
+  window.addEventListener('keydown', function(){
+    theGame.parseKey();
+  }, false)
   diceArea.addEventListener('click', function(){
-    theGame.hold();
+    theGame.clickHold();
   }, false)
 };
