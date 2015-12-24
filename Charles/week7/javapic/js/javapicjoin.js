@@ -11,6 +11,12 @@ window.onload = function() {
   * note: this parameter to checkform doesn't have to be called 'event', it
   *   can be anything. Apparently Firefox wants the event object to be passed
   *   into the callback function (e.g. checkform), but not to the eventListener.
+  *
+  *   Also, I noticed that the alerts look very different in Chrome and Firefox,
+  *   so you probably shouldn't use them. A big reason to implement your own
+  *   validation is so things more consistent across browsers. Instead of alerts
+  *   try inserting an element containing an error message next to a field that
+  *   has an error.
   */
 function checkform(event){
   var x = document.getElementById("signup").noValidate =true;
