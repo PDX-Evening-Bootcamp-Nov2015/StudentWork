@@ -69,14 +69,26 @@ function getUserName() {
   var pageURL = window.location.href,
       uNameRegEx = /[?&]+([^?&]+)/g, // regex to match strings after ? in url
       passedData = pageURL.match(uNameRegEx); // cache all the matching strings
-  // search the url for the passed username and return it
+  console.log('passedData: ' + passedData);
+  // search the match data for the passed username and return it
+  for (var i = 0; i < passedData.length; i++) {
+    var currStr = passedData[i];
+    console.log(currStr);
     // match function returns array, loop through that array to find username
-    // break the loop when we find the username so our variable is one thing
+    if (currStr.substr(0, 9) === '?username') {
+      // break the loop when we find the username
+      return currStr.substr(10)
+    }
+  }
 }
 
 // function to insert the username into the page
+function popUName(uName) {
   // select the tagline text property and cache it so we can modify it
+  var tagLine = document.getElementsByClassName('tagline')[0];
   // modify the cached text property to include the username
+  tagLine.innerText = tagLine.innerText + ', ' + uName;
+}
 
 // function to select clicked image and display in lightbox
   // cache the lightbox div
@@ -97,6 +109,9 @@ function getUserName() {
   // remove event listener to close lightbox div
 
 window.onload = function(){
-  var userName, // parse the url for the username so we can put in on the page
-      totalImgs = 60; // total number of images in the folder
+  var userName = getUserName(), // parse url for username to insert into page
+      totalImgs = 60; // total number of images in img folder
+  console.log("Username: " + userName);
+  popUName(userName); // fill in userName
+  popGallery(totalImgs); // fill in images from img folder
 };
