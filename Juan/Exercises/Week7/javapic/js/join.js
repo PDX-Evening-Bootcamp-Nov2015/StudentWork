@@ -76,7 +76,6 @@ function validateAll(event) {
   var formFields = document.forms.signup,
       username,
       errors = 0;
-  event.preventDefault();
   // remove previous error styling
   unstyleErrors();
   // loop through the array of form fields
