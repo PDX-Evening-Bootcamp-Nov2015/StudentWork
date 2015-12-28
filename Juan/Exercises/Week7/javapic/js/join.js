@@ -96,7 +96,7 @@ function validateAll(event) {
   // if all is valid pass the username on to the next page
   if (!errors) {
     username = formFields.username.value;
-    formFields.action = 'gallery.html?' + username;
+    formFields.action = 'gallery.html?username=' + username;
   }
 }
 
