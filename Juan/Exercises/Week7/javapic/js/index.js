@@ -20,12 +20,15 @@ function backImgChng(target, num) {
 
 // loop function to select image and call change function every 10 seconds
 function imageSelector() {
-  // set initial image value
-  var imgNum = 1,
+  var imgNum = 1, // set initial image value
+      totImg = 60, // store the highest image number
       jumbotron = document.getElementById('jumbotron');
   // select a new number and call the image change function every 10 seconds
   window.setInterval(function() {
     imgNum++;
+    if (imgNum > totImg) {
+      imgNum = 1;
+    }
     backImgChng(jumbotron, imgNum);
   }, 10000);
 }
