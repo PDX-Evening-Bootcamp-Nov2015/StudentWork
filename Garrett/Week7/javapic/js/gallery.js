@@ -7,14 +7,37 @@
 */
 
 window.onload = function(e){
+    var galleryHTML = document.getElementById("gallery");
+        galleryHTML.addEventListener("click", lightbox);
     var user = "Garrett";
     var name = document.getElementsByClassName("tagline")[0].innerHTML = "develop something, " + user;
+    createImage();
 };
 
-function uctext (){
-    var galleryHTML = document.getElementById("gallery");
-    console.log(galleryHTML.childNodes);
-    //console.log(galleryHTML.innerHTML);
+function createImage () {
+    var fileNum;
+    for (var i=1; i<60; i += 1){
+        if (i <= 9 ){
+            fileNum = "0" + i;
+        } else {
+            fileNum = i;
+        }
+        var fileName = "images/pdxcg_" + fileNum + ".jpg";
+
+        var galleryHTML = document.getElementById("gallery");
+        var liContainer = document.createElement("li");
+        var newImage = document.createElement("img");
+        newImage.setAttribute('src', fileName);
+        //newImage.setAttribute('class', 'display_img');
+        newImage.addEventListener("click", lightbox);
+        galleryHTML.appendChild(liContainer);
+        liContainer.appendChild(newImage);
+    }
 };
 
-uctext();
+function lightbox () {
+    var showImg = event.target;
+    showImg.setAttribute('class', 'display_img');
+    console.log(showImg);
+};
+
