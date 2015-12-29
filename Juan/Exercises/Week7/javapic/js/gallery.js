@@ -69,11 +69,9 @@ function getUserName() {
   var pageURL = window.location.href,
       uNameRegEx = /[?&]+([^?&]+)/g, // regex to match strings after ? in url
       passedData = pageURL.match(uNameRegEx); // cache all the matching strings
-  console.log('passedData: ' + passedData);
   // search the match data for the passed username and return it
   for (var i = 0; i < passedData.length; i++) {
     var currStr = passedData[i];
-    console.log(currStr);
     // match function returns array, loop through that array to find username
     if (currStr.substr(0, 9) === '?username') {
       // break the loop when we find the username
@@ -100,23 +98,24 @@ function imgClick(event) {
   // add event listener to close lightbox div
   document.addEventListener('click', closeLightbox, 'false');
   // check if the lightbox is already displayed
-  if (lightBox.classList.match('display_img') != -1) {
+  if (!lightBox.className.match('display_none')) {
     // if so, close the lightbox
     closeLightbox();
     return;
   }
   // get the proper URL for that image
-  if (clickTarget.tagName === 'img') {
+
+  if (clickTarget.tagName.toLowerCase() === 'img') {
     imgPath = clickTarget.src;
   } else {
-    imgPath = clickTarget.querySelector('img').src;
+    imgPath = clickTarget.childNodes[0].src;
   }
   // change the lightbox img target url
   lightBox.querySelector('img').src = imgPath;
   // remove class that hides lightbox div
   lightBox.classList.remove('display_none');
   // add class that displays lightbox div
-  lightbox.classList.add('display_img');
+  lightBox.classList.add('display_img');
 }
 
 // function to close lightbox on a click elsewhere
@@ -125,13 +124,14 @@ function closeLightbox(event) {
   var lightBox = document.getElementById('image_show'),
       clickTarget = event.target;
   // check to see if the click was on the lightbox image
-  if (clickTarget === ) {
-
+  if (clickTarget.parentNode.id === 'image_show' &&
+      clickTarget.tagName === 'IMG') {
+        return; // exit function
   }
   // add class that hides lightbox div
-  lightbox.classList.add('display_none');
+  lightBox.classList.add('display_none');
   // remove class that displays lightbox div
-  lightbox.classList.remove('display_img');
+  lightBox.classList.remove('display_img');
   // remove event listener to close lightbox div
   document.removeEventListener('click', closeLightbox, 'false');
 }
@@ -140,11 +140,11 @@ window.onload = function(){
   var userName = getUserName(), // parse url for username to insert into page
       totalImgs = 60, // total number of images in img folder
       galleryImgs;
-  console.log("Username: " + userName);
   popUName(userName); // fill in userName
   popGallery(totalImgs); // fill in images from img folder
-  galleryImgs = document.querySelectorAll('#gallery img');
+  galleryImgs = document.querySelectorAll('#gallery li'); // get all images
   for (var i = 0; i < galleryImgs.length; i++) {
-
+    // attach handler to each image to bring it to focus
+    galleryImgs[i].addEventListener('click', imgClick, 'false');
   }
 };
