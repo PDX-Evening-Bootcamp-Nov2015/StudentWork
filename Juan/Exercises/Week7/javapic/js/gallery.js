@@ -1,5 +1,3 @@
-
-
 /*
 Requirements
 _gallery.html_
