@@ -76,7 +76,6 @@ function validateAll(event) {
   var formFields = document.forms.signup,
       username,
       errors = 0;
-  event.preventDefault();
   // remove previous error styling
   unstyleErrors();
   // loop through the array of form fields
@@ -97,7 +96,7 @@ function validateAll(event) {
   // if all is valid pass the username on to the next page
   if (!errors) {
     username = formFields.username.value;
-    formFields.action = 'gallery.html?' + username;
+    formFields.action = 'gallery.html?username=' + username;
   }
 }
 
