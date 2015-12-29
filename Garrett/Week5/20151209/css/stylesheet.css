@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+* { font-family: 'Droid Sans', sans-serif; }
+header { text-align:center; background-color:red }
+body { }
+nav { background-color:lightblue }
+header nav ul li {display:inline-block }
+header nav ul li a { text-decoration:none; }
+.main { padding:20px; color:red }
+.bio { display:inline-block; width:50%;}
+h1 { color:green }
+h2 { color:blue }
+.bio p { color:pink; width:50%; }
+img { max-width:75%; border-radius:50%; }
+.section1 { display:inline-block; 
+            color:purple; 
+            width:40%; 
+            text-align: justify;
+            padding:0px 20px 0px 0px;}
+.section2 { display:inline-block; 
+            color:orange; 
+            width:40%; 
+            text-align: justify;
+            padding:0px 20px 0px 0px;}
+footer { color:yellow; text-align:center;}

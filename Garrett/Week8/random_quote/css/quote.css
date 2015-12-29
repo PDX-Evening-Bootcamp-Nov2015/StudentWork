@@ -1,0 +1,10 @@
+h1 {
+    text-align:center;
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url("images/hawnuhlee_inspiring.jpg");
+    background-color:#00394C;
+    font-family: sans-serif;
+}

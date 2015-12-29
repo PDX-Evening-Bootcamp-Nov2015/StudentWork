@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="list.css">
+
+    <meta charset="utf-8">
+    <title>Lists </title>
+  </head>
+  <body>
+    <ul id="todo_list">
+        
+      <li class=default> Maigen and Garrett's Christmas list </li>
+      <li class=default> Dog treats</li>
+      <li class=default> Wine</li>
+      <li class=default> Riot Points</li>
+      <li id="test_changing_me" class=default> GONNA DO STUFF </li>
+    </ul>
+
+    <form >
+      <input type="text" id="new_list_text">
+      <button onclick="hello(event);" id="add_item">
+        Add Item
+      </button>
+      <button onclick="goodbye(event);" id="del_item">
+        Del Item
+      </button>
+    </form >
+    <script src="list.js">
+    </script>
+
+  </body>
+</html>

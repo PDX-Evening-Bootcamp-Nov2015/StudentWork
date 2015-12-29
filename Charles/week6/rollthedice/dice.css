@@ -1,3 +1,7 @@
+.bround {
+  max-width: 60%;
+  display: inline-block;
+}
 
 tbody {
   max-width: 40%;
