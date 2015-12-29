@@ -11,7 +11,7 @@ function getQuote(){
       document.getElementById("author").innerText = responseObject.author;
     }
   };
-  request.open('GET', 'http://quotesondesign.com/api/3.0/api-3.0.json', true);
+  request.open('GET', '../api-3.0.json', true);
   request.send();
 }
 
