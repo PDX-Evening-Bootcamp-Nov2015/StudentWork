@@ -91,27 +91,60 @@ function popUName(uName) {
 }
 
 // function to select clicked image and display in lightbox
+function imgClick(event) {
   // cache the lightbox div
+  var lightBox = document.getElementById('image_show'),
   // determine which image was clicked
-  // check if the lightbox is already displayed
-    // if so, close the lightbox
-    // remove lightbox closing event listener
-  // get the proper URL for that image
-  // change the image div target url
-  // remove class that hides lightbox div
-  // add class that displays lightbox div
+      clickTarget = event.target,
+      imgPath;
   // add event listener to close lightbox div
+  document.addEventListener('click', closeLightbox, 'false');
+  // check if the lightbox is already displayed
+  if (lightBox.classList.match('display_img') != -1) {
+    // if so, close the lightbox
+    closeLightbox();
+    return;
+  }
+  // get the proper URL for that image
+  if (clickTarget.tagName === 'img') {
+    imgPath = clickTarget.src;
+  } else {
+    imgPath = clickTarget.querySelector('img').src;
+  }
+  // change the lightbox img target url
+  lightBox.querySelector('img').src = imgPath;
+  // remove class that hides lightbox div
+  lightBox.classList.remove('display_none');
+  // add class that displays lightbox div
+  lightbox.classList.add('display_img');
+}
 
 // function to close lightbox on a click elsewhere
+function closeLightbox(event) {
   // cache the lightbox div
+  var lightBox = document.getElementById('image_show'),
+      clickTarget = event.target;
+  // check to see if the click was on the lightbox image
+  if (clickTarget === ) {
+
+  }
   // add class that hides lightbox div
+  lightbox.classList.add('display_none');
   // remove class that displays lightbox div
+  lightbox.classList.remove('display_img');
   // remove event listener to close lightbox div
+  document.removeEventListener('click', closeLightbox, 'false');
+}
 
 window.onload = function(){
   var userName = getUserName(), // parse url for username to insert into page
-      totalImgs = 60; // total number of images in img folder
+      totalImgs = 60, // total number of images in img folder
+      galleryImgs;
   console.log("Username: " + userName);
   popUName(userName); // fill in userName
   popGallery(totalImgs); // fill in images from img folder
+  galleryImgs = document.querySelectorAll('#gallery img');
+  for (var i = 0; i < galleryImgs.length; i++) {
+
+  }
 };
