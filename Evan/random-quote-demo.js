@@ -4,7 +4,6 @@
 function getQuote(){
   var request = new XMLHttpRequest();
   request.onload = function () {
-    console.log(this.responseText);
     if (request.status === 200) {
       var responseObject = JSON.parse(this.responseText);
       document.getElementById("quote-output").innerText = responseObject.quote;
@@ -29,7 +28,6 @@ function getQuoteJSONP() {
 }
 
 function loadQuote(myData) {
-  console.log(myData);
   document.getElementById("quote-output").innerText = myData.quote;
   document.getElementById("author").innerText = myData.author;
 }
