@@ -22,7 +22,7 @@ function newRequest() {
     }
   }
   // set paratmeters for request
-  newReq.open('GET', '../api-3.0.json', true);
+  newReq.open('GET', 'http://54.68.253.162/StudentWork/api-3.0.json', true);
   // send the request
   newReq.send();
 }
