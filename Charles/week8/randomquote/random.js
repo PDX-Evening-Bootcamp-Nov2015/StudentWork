@@ -9,4 +9,4 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-console.log("myArr");
+console.log(myArr);
