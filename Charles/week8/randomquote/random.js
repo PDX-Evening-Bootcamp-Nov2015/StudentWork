@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "../api-3.0.json";
+var url = "./api-3.0.json";
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
