@@ -4,7 +4,7 @@ window.onload = function() {
 
 function randomQuote(){
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://quotesondesign.com/api/3.0/api-3.0.json";
+    var url = "http://54.68.253.162/StudentWork/api-3.0.json";
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
