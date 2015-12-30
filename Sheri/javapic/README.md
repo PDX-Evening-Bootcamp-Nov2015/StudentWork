@@ -12,10 +12,10 @@ Students have been 'hired' to add functionality to the Javapic website (no, it d
   - any validation errors should be presented clearly to the user so that they may correct them
   - on completion of the form, navigate the user to the gallery, passing their name to the page
 - _gallery.html_
-  - update the slogan to add a ", user_name", with the user's name
-  - loop through the image folder and display each image in the folder
+  x- update the slogan to add a ", user_name", with the user's name
+  x- loop through the image folder and display each image in the folder
   - add the functionality so that if a user clicks on an image, the lightbox appears with that image loaded in
-  - when the lightbox is up, is the user clicks anywhere not on the image, the lightbox closes
+  - when the lightbox is up, if the user clicks anywhere not on the image, the lightbox closes
 
 ## Additional Notes:
 - Students are **not** allowed to directly modify the HTML or CSS at all, with the exception of adding their script tags.

@@ -28,8 +28,7 @@ function nextImage() {
         console.log("url(images/pdxcg_" + "0" + picNum + ".jpg)");
         /*here we skip the missing image. A little simple and not useful if other images disappear.
         could be fixed later. Evan says changing it isn't in the scope of the assignment;
-        we just need to make sure a missing image doesn't break the code the code ran fine
-        before I added this, so it should still */
+        we just need to make sure a missing image doesn't break the code the code */
       } else if (picNum === 42){
         changeIt.style.backgroundImage="url(images/pdxcg_43.jpg)";
       }
