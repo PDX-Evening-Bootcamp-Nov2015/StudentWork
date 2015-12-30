@@ -1,14 +1,15 @@
 //windows onload function
 //loads functions upon opening webpage
 window.onload = function() {
-  document.getElementById("submit").onclick = checkform;
+  document.getElementById("submit").addEventListener("click", checkform, false);
 };
 
-function checkform(){
-  var x = document.getElementById("signup").noValidate =true;
+function checkform(event){
+  var x = document.getElementById("signup").noValidate = true;
   var xname = document.forms["signup"]["name"].value;
   var xusername = document.forms["signup"]["username"].value;
   var xemail = document.forms["signup"]["email"].value;
+  sessionStorage.setItem('username', xusername);
   if (xname === null || xname ===""){
     alert("Please fill out your name");
     event.preventDefault();
@@ -34,6 +35,10 @@ function testemail(xemail){
 }
 
 function redirect(){
-    var link = "/Users/pythonnnnnn/bootcamp/Studentwork/Charles/week7/javapic/gallery.html";
-    window.location.pathname = link;
+    // var link = "gallery.html";
+    window.location.href = "gallery.html";
+}
+
+function sessionstore (xname) {
+  sessionStorage.setItem('username', xname);
 }
