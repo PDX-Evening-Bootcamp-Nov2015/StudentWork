@@ -1,7 +1,7 @@
 function apiQuote(){
   //open a new request for a quote
   var request = new XMLHttpRequest();
-  request.open("GET", "http://quotesondesign.com/api/3.0/api-3.0.json");
+  request.open("GET", "../../api-3.0.json");
   //parse the response test into an object
   request.addEventListener("load",function(){
     var data = Json.parse(this.responseText);
@@ -12,7 +12,7 @@ function apiQuote(){
     //add it to the DOM
     document.getElementById('quote_div').innerText=quote;
     document.getElementById('author_div').innerText=author;
-
+    request.send();
   })
  }
   // //
