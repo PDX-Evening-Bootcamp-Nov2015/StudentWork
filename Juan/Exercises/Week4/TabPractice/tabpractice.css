@@ -1,0 +1,40 @@
+body {
+  margin: 0 0 0 0;
+  font-family: monospace;
+}
+h1 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+h2 {
+  margin-top: .5rem;
+}
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.tabnav {
+  width: 100%;
+  border-bottom: 2px solid blue;
+  padding-left: 15%;
+}
+.tabnav li {
+  display: inline-block;
+  margin-bottom: .2rem ;
+}
+.tabnav a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid blue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: .2rem .2rem .2rem .2rem;
+}
+.box {
+  padding: .5rem 1rem .5rem;
+  border: 1px solid blue;
+  margin-bottom: .5rem;
+  border-radius: 5px;
+  background-color: lightblue;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}

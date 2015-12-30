@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Angry Dice</title>
+        <link rel="stylesheet" href="css/dice.css" />
+    </head>
+    <body>
+        <div class="content">
+        <h1>Angry Dice!</h1>
+            <div id="rules">
+                <h3>Do you want to play a game?</h3>
+                <p>This is a great place to put directions for how to play the game, and how to win</p>
+                <ol>
+                    <li>rule 1</li>
+                    <li>rule 2</li>
+                    <li>rule 3</li>
+                    <li>rule 4</li>
+                </ol>
+            </div>
+            <p>Click the button below to start a fresh game at any time</p>
+            <button id="freshgame" name="fresh">Start New</button>
+            <div id="theTable">
+                <div class="d1">
+                    <img src="images/angry.png" id="0"><br>
+                    <input type="checkbox" id="dice1">
+                </div>
+                <div class="d2">
+                    <img src="images/angry.png" id="1"><br>
+                    <input type="checkbox" id="dice2">
+                </div>
+                <div class="buttonContainer">
+                    <button id="rolldice" name="Roll">ROLL IT BABY</button>
+                </div>  
+            </div>          
+        <p id="stageLabel">Roll the dice!</p>
+        </div>
+        <script src="js/angrydice.js"></script>
+    </body>
+</html>

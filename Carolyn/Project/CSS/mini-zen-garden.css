@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Nova+Square);
+
+h1{
+  color: #E23045;
+  font-family: Nova Square, sans-serif;
+  font-size: 3em;
+}
+h2{
+  color: white;
+  background-color: #E23045;
+  font-family: Nova Square, sans-serif;
+  padding: 3px;
+}
+.preamble{
+  background-color: #1B4549;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 20px 50px 0px #7AB3B0;
+  padding: 30px;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+h3{
+  font-family: Nova Square, sans-serif;
+}
+.main{
+  display: inline-block;
+  width: 50%;
+}
+a{
+  color: #E23045;
+}
+.explanation, .participation{
+  background-color: #FFF6E0;
+  font-family: sans-serif;
+  box-shadow: 40px 80px 0px #7AB3B0;
+  margin-top: 40px;
+  display: inline-block;
+  padding: 20px;
+  border: 3px solid;
+}
+.participation{
+  margin-bottom: 100px;
+}
+aside{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+aside li {
+   display: block;
+   background-color: #E23045;
+   margin: 5px 0;
+   padding: 9px 60px 9px 60px;
+   text-align: center;
+   box-shadow: 10px 30px  #F59581;
+   font-family: sans-serif;
+   font-size: 1.5em;
+   margin-bottom: 7px;
+}
+.zen-resources ul li a{
+  color: #FFF6E0;
+  text-decoration: none;
+}
+footer a{
+  color: #FFF6E0;
+  background-color: #908673;
+  font-family: sans-serif;
+  padding: 10px;
+  box-shadow: 10px 14px #D8CFBC;
+  margin-top: 40px;
+  display: inline-block;
+  border-radius: 10%;
+  font-size: 1.7em;
+  text-decoration: none;
+}
+footer{
+  text-align: right;
+}
+.resources{
+  display: none;
+}

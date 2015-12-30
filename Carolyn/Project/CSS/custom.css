@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Nova+Square);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, MediumTurquoise, white);
+}
+h1 {
+  margin-top: 5px;
+  font-family: Papyrus, fantasy;
+  text-align: center;
+  border-bottom: solid 2px black;
+  border-top: dotted 2px black;
+  font-variant: small-caps;
+  font-size: 50px;
+  font-weight: bolder;
+  background: linear-gradient(to right, Turquoise, #CEECEB);
+}
+h2 {
+  font-family: Gabriola, cursive;
+  text-align: center;
+  font-size: 40px;
+}
+li {
+  display: inline;
+}
+section {
+ display: inline-block;
+ width: 46%;
+ vertical-align: top;
+ text-align: justify;
+ padding: 2%;
+ border-bottom: solid 2px black;
+ font-family: Chalkduster;
+ font-size: 20px;
+ background: linear-gradient(to right, #81E5DC, #CEECEB);
+}
+img {
+  border-radius: 45%;
+  vertical-align: top;
+  width: 40%;
+  float: left;
+  margin: 17px;
+  border: dotted;
+
+}
+p {
+  font-family: Bradley Hand;
+  font-variant: small-caps;
+  /*font-weight: bold;*/
+  font-size: 30px;
+  padding-right: 4px;
+}
+footer {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+a {
+  font-family: Gabriola;
+  margin-top: 14px;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 5px;
+  font-variant: small-caps;
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+}

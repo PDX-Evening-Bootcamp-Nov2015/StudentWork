@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Construction Pricing</title>
+    <link rel="stylesheet" href="css/red_test.css" />
+</head>
+<body>
+    <main>
+        <h1>Materials for Sale</h1>
+
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Material</th>
+                    <th>Price</th>
+                    <th>In Stock</th>
+                </tr>
+            </thead>
+            <tbody id="inventory">
+              <!-- JS generated content goes here -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>
+                  Select All:
+                  <input id="select_all" type="checkbox" name="select_all">
+                </td>
+                <td>
+                  <input id="material" type="text" name="material" value="">
+                </td>
+                <td>
+                  <input id="price" type="text" name="price" value="">
+                </td>
+                <td>
+                  <input id="in_stock" type="text" name="in_stock" value="">
+                </td>
+              </tr>
+            </tfoot>
+        </table>
+        <button name="add_item" id="add_inv">Add Inventory Item</button>
+        <button name="remove_checked" id="remove_inv">Remove Checked</button>
+        <button name="Add_Stock" id="add_stock">Add Stock</button>
+        <button name="Remove_Stock" id="remove_stock">Remove Stock</button>
+
+    </main>
+    <script type="text/javascript" src="js/pricing.js">
+
+    </script>
+</body>
+</html>

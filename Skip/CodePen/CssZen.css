@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Nova+Square);
+
+body {
+    margin: 150px;
+    font-family: "Nova Square",sans-serif;
+    background-color: #E4FBFA;
+}
+
+footer {
+    text-align: right;
+}
+
+footer a {
+
+    background-color: #908673;
+    color: white;
+    box-shadow: 20px 20px ##D8CFBC;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: red;
+}
+
+
+h1 {
+  color: #E23045;
+  font-family: "Nova Square",sans-serif;
+  font-size: 2em;
+}
+
+h2 {
+    background-color: #E23045;
+    color: white;
+    font-family: "Nova Square",sans-serif;
+    font-size: 1em;
+    padding: 3px;
+
+}
+
+h3.resources {
+    display: none;
+}
+
+aside {
+
+    display:inline-block;
+    vertical-align: top;
+    padding: 3px;
+
+
+
+
+}
+
+aside a {
+
+    color: white;
+    background-color: #E23045;
+    box-shadow: 10px 10px #F59581;
+    margin: 4px;
+
+}
+
+.main {
+
+    font-family: "Nova Square",sans-serif;
+    font-size: 1em;
+    padding: 3px;
+    display:inline-block;
+    width:50%
+}
+
+.preamble {
+    background-color: #1B4549;
+    color: white;
+    font-size: .7em;
+    padding: 8px;
+    box-shadow: 20px 20px #7AB3B0;
+    margin: 30;
+
+}
+
+
+.explanation {
+    background-color: white;
+    color: black;
+    font-size: .7em;
+    padding: 8px;
+    box-shadow: 20px 20px #7AB3B0;
+    margin: 30;
+    border: 2px solid black;
+
+
+}
+
+.participation {
+    background-color: white;
+    color: black;
+    font-size: .7em;
+    padding: 8px;
+    box-shadow: 20px 20px #7AB3B0;
+    margin: 30;
+    border: 2px solid black;
+}
