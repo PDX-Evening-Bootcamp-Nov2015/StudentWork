@@ -1,13 +1,12 @@
 var xmlhttp = new XMLHttpRequest();
-var apiUrl = "http://quotesondesign.com/api/3.0/api-3.0.json";
+var apiUrl = "myTutorials.txt";
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.status == 200) {
-        var apiDump = JSON.parse(xmlhttp.responseText);
+        var dataDump = JSON.parse(xmlhttp.responseText);
+        // myFunction(myArr);
     }
-    console.log(apiDump);
+    document.getElementById("quote").innerHTML = dataDump;
 };
 xmlhttp.open("GET", apiUrl, true);
 xmlhttp.send();
-
-document.getElementById("quote").innerHTML = apiDump;
