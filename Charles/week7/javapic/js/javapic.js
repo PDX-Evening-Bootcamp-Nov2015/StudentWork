@@ -24,5 +24,5 @@ imagelist.push("pdxcg_"+i+".jpg");
   }
   return imagelist;
 }
-console.log(test);
+
 var test = addimages(imagelist);
