@@ -6,8 +6,7 @@ xmlhttp.onreadystatechange = function() {
         var dataDump = JSON.parse(xmlhttp.responseText);
         // myFunction(myArr);
     }
+    document.getElementById("quote").innerHTML = dataDump;
 };
 xmlhttp.open("GET", apiUrl, true);
 xmlhttp.send();
-
-document.getElementById("quote").innerHTML = dataDump;
