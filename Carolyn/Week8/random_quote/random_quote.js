@@ -11,7 +11,7 @@ function randomQuote(){
             var obj = JSON.parse(xmlhttp.responseText);
             document.getElementById("demo").innerHTML =
             obj.quote + "<br>" +
-            obj.author;
+            "-"+obj.author;
         };
     };
     xmlhttp.open("GET", url, true);
