@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Construction Pricing</title>
+    <link rel="stylesheet" href="css/red_test.css" />
+</head>
+<body>
+    <main>
+        <h1>Materials for Sale</h1>
+
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Material</th>
+                    <th>Price</th>
+                    <th>In Stock</th>
+                </tr>
+            </thead>
+            <tbody id="inventory">
+                <tr>
+                    <td><input type="checkbox" id='0'></td>
+                    <td>Wood</td>
+                    <td>$15</td>
+                    <td id="woodStock" class="true">Yes</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <form>
+                <tr>
+                    <td></td>
+                    <td><input type="text" name="itemName"></td>
+                    <td><input type="text" name="itemPrice"></td>
+                    <td><input type="checkbox" name="itemStock"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <button id="add_item" onclick="addItem();">Add Item</button>
+                        <button id="add_stock" onclick="addStock();">Add Stock</button>
+                        <button id="remove_stock" onclick="delStock();">Remove Stock</button>
+                    </td>
+                </tr>
+                </form>
+            </tfoot>
+        </table>
+        
+
+    </main>
+    <script src="js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
