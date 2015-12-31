@@ -6,16 +6,14 @@
 - when the lightbox is up, is the user clicks anywhere not on the image, the lightbox closes
 */
 
-window.onload = function(e){
-    var imageshowHTML = document.getElementById("image_show");
-        imageshowHTML.addEventListener("click", closeLightbox);
+window.onload = function(){
+    //listen for clicks
+    document.getElementById("image_show").addEventListener("click", closeLightbox);
     var user = "Garrett";
     var name = document.getElementsByClassName("tagline")[0].innerHTML = "develop something, " + user;
-    createImage();
-};
-
-function createImage () {
+    //create all the images
     //loop through the number of files to create images with event listeners.
+    var galleryHTML = document.getElementById("gallery");
     var fileNum;
     for (var i=1; i<60; i += 1){
         if (i <= 9 ){
@@ -25,19 +23,18 @@ function createImage () {
         }
         var fileName = "images/pdxcg_" + fileNum + ".jpg";
 
-        var galleryHTML = document.getElementById("gallery");
         var liContainer = document.createElement("li");
         var newImage = document.createElement("img");
         newImage.setAttribute('src', fileName);
         newImage.setAttribute('class', 'gallery');
-        newImage.addEventListener("click", lightbox);
+        newImage.addEventListener("click", openLightbox);
         galleryHTML.appendChild(liContainer);
         liContainer.appendChild(newImage);
     }
 };
 
 //open the lightbox
-function lightbox () {
+function openLightbox () {
     //get the lightbox prepped
     var showImg = event.target;
     var showImgSrc = showImg.getAttribute('src');
