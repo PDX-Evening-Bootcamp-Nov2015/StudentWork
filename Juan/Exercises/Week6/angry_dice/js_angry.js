@@ -45,13 +45,6 @@ function Game(){
     3 : [5, 6]
   };
 
-  // function to hold a die
-  this.hold = function(dieIndex){
-    var clickedDie = this.dice[dieIndex].val,
-        validStageHolds = this.validHolds[this.stage],
-        dieImg = get;
-  };
-
   // function to determine which die was clicked and hold
   this.clickHold = function () {
     var clickedImg = event.target,
@@ -61,7 +54,6 @@ function Game(){
     // check to make sure an image is clicked, exit if container was clicked
     // instead of image
     if (clickedImg.id === 'dice_area') {
-      console.log('exiting');
       return;
     }
     // check to make sure the die has a value that can be held in this stage
@@ -81,8 +73,7 @@ function Game(){
   // you win Function
   this.youWin = function() {
     var stageNum = document.getElementById('stage_num'),
-        rollButton = document.getElementById('roll'),
-        that = this;
+        rollButton = document.getElementById('roll');
     alert('You win!');
     stageNum.innerText = 'You win!';
     rollButton.value = 'Play Again!';
@@ -92,8 +83,7 @@ function Game(){
   // reset roll button value after game win
   this.newGameReset = function() {
     var rollButton = document.getElementById('roll'),
-        diceArea = document.getElementById('dice_area'),
-        that = this;
+        diceArea = document.getElementById('dice_area');
     diceArea.innerHTML = '';
     this.stage = 1;
     this.updateStage();
