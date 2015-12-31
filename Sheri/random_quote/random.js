@@ -4,7 +4,7 @@ function apiQuote(){
   request.open("GET", "../../api-3.0.json");
   //parse the response test into an object
   request.addEventListener("load",function(){
-    var data = Json.parse(this.responseText);
+    var data = JSON.parse(this.responseText);
     console.log(data);
     //grab the quoote text and author
     var quote = data.quote;
@@ -12,8 +12,9 @@ function apiQuote(){
     //add it to the DOM
     document.getElementById('quote_div').innerText=quote;
     document.getElementById('author_div').innerText=author;
-    request.send();
+
   })
+  request.send();
  }
   // //
   // // apiQuote()
