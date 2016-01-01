@@ -1,11 +1,13 @@
-/*
- *
+/* Garrett's Dice Game Table
+ * Commited to master 12/30/2015
  */
+
+document.getElementById("rolldice").addEventListener("click", rollDice);
 
 var dicelist = [];
 
 // Grabs the value in the text box and pass it on.
-button.onclick = function rolldice () {
+function rollDice () {
     //start a fresh table
     clearTable();
     
@@ -13,17 +15,17 @@ button.onclick = function rolldice () {
     var dicecount = document.getElementById('num').value;
     if (isNaN(dicecount) || dicecount < 0) {
         alert("invalid entry, need a number");
-        exit();
+        return;
     }
     console.log("Gonna Roll " + dicecount + " dice...");
-    alldice(dicecount);
+    allDice(dicecount);
 
     //show the dice
     showTable();
 };
 
 // for every dice, roll it, and get the side, and add it to an array.
-function alldice (numDice) {
+function allDice (numDice) {
     for (var i=0; i<numDice; i += 1) {
         var num = randomNum();
         dicelist.push(num);
@@ -45,8 +47,10 @@ function randomNum (){
 
 //Show the table!
 function showTable () {
+    // show the table
+    document.getElementById('theTable').style.display = "flex";
     var theTable = document.getElementById('theTable');
-
+   
     // for every item, create an image tag 
     for (var i=0; i<dicelist.length; i +=1) {
         var diceimg = document.createElement('img');
@@ -62,9 +66,5 @@ function clearTable () {
     dicelist = [];
 
     //clear the imgs from the page.
-    var theTable = document.getElementById('theTable');
-    while (theTable.firstChild) {
-            theTable.removeChild(theTable.firstChild);
-    };
-
+    document.getElementById('theTable').innerHTML = "";
 };

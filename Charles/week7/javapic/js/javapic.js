@@ -3,7 +3,7 @@
 window.onload = function() {
   addimages(imagelist);
 //setInterval rotates the picture every two seconds
-  setInterval(test2, 2000);
+  setInterval(test2(), 2000);
 };
 //takes the random item and inserts it into the css class image destination
 function test2() {

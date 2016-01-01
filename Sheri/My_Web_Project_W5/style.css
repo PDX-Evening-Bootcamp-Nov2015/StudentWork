@@ -1,0 +1,42 @@
+.head {
+  border:5px solid navy;
+  background-color:rgba(122, 207, 225, 0.6);
+
+
+}
+h1 {
+  font-weight: bolder;
+  font-size: 5em;
+  color: navy;
+}
+h2 {
+  font-weight: bold;
+  font-size: 4em;
+  color:navy;
+}
+p {
+  color:blue;
+  font-size: 2em;
+
+}
+img {
+  border-radius: 100px;
+  width: 10em;
+  text-align: left;
+
+  margin: 1em;
+  border:5px solid navy;
+
+}
+
+.nav ul li{
+  display:inline;
+
+}
+
+.main {
+max-width: 96%;
+margin-left:auto;
+margin-right:auto;
+display: inline-block;
+}
