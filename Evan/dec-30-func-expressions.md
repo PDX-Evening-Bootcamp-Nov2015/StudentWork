@@ -90,3 +90,25 @@ function greet(name) {
 ```
 
 If we call the function with an argument, it behaves how we'd expect:
+
+```javascript
+greet("Jane"); // logs "Hello Jane"
+```
+
+But if for some reason we don't pass a name to greet, we'd get this:
+
+```javascript
+greet(); // logs "Hello undefined"
+```
+
+To ensure that we have a default value in place for when we don't get a name passed in,
+we can use the short-circuiting behavior of || to assign that value in one line:
+
+```javascript
+function greet(name) {
+  var name = name || "friend";
+  console.log("Hello " + name);
+}
+```
+
+If name is a non-empty string, then || will short-circuit, and the input be logged as expected. However, if name is an empty string, or no name is passed (`undefined`, which is falsy), then || would evaluate and return "friend". We'd have to do some error checking to limit the input to strings. Passing a non-string truthy value might give strange output.
