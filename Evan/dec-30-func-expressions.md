@@ -109,6 +109,19 @@ function greet(name) {
   var name = name || "friend";
   console.log("Hello " + name);
 }
+
+greet(); // logs "Hello friend"
+greet(""); // logs "Hello friend"
+greet(undefined); // logs "Hello friend"
+
+greet("David"); // logs "Hello David"
 ```
 
-If name is a non-empty string, then || will short-circuit, and the input be logged as expected. However, if name is an empty string, or no name is passed (`undefined`, which is falsy), then || would evaluate and return "friend". We'd have to do some error checking to limit the input to strings. Passing a non-string truthy value might give strange output.
+If name is a non-empty string, then || will short-circuit, and the input be logged as expected. However, if name is an empty string, or no name is passed (`undefined`, which is falsy), then || would evaluate and return "friend". We'd have to do some error checking to limit the input to strings. Passing a non-string truthy value (or a string with irrelevant content) might give strange output:
+
+```javascript
+greet({}); // logs "Hello [object Object]"
+greet([]); // logs "Hello "
+greet(1.2); // logs "Hello 1.2"
+greet(" "); // logs "Hello  "
+```
