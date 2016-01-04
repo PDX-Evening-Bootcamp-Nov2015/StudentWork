@@ -15,7 +15,7 @@ function buildAccount (event){
         validate(joinForm.elements[i]);
     }
 
-    document.cookie = "username=garretts"; 
+    document.cookie = "username=garretts;"; 
 
     console.log(document.cookie);
 };
