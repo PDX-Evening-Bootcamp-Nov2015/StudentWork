@@ -38,11 +38,10 @@ function openLightbox () {
     //get the lightbox prepped
     var showImg = event.target;
     var showImgSrc = showImg.getAttribute('src');
-    var imgBig = document.getElementById("image_show");
     
     //set the class on the lightbox for all to see
-    imgBig.firstChild.setAttribute('src', showImgSrc);
-    imgBig.setAttribute('class', 'display_img'); 
+    $('#image_show').first().attr('src', showImgSrc);
+    $('#image_show').attr('class', 'display_img'); 
 
     //I don't know why this doesn't work.
     //imgBig.firstChild = showImg;
@@ -57,7 +56,6 @@ function closeLightbox () {
     // if you click on the DIV, (not but not the image)
     // otherwise change the class to hide it..
     if (showImg.getAttribute("id") === "image_show"){
-        var imgBig = document.getElementById("image_show");
-        imgBig.setAttribute('class', 'display_none'); 
+        $("#image_show").attr('class', 'display_none'); 
     };
 };
