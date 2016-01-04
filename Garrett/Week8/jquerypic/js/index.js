@@ -17,5 +17,5 @@ function changeBG (){
     fileNum = currentFile;
   }
   var fileName = "images/pdxcg_" + fileNum + ".jpg";
-  $("#jumbotron").attr("src", fileName);
+  $('#jumbotron').css('background-image', 'url(' + fileName + ')');
 };
