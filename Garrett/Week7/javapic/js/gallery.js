@@ -9,8 +9,8 @@
 window.onload = function(){
     //listen for clicks
     document.getElementById("image_show").addEventListener("click", closeLightbox);
-    var user = "Garrett";
-    var name = document.getElementsByClassName("tagline")[0].innerHTML = "develop something, " + user;
+    var user = document.cookie.split("=")[1];
+    var name = document.getElementsByClassName("tagline")[0].innerHTML = "develop something, " + user.toUpperCase();
     //create all the images
     //loop through the number of files to create images with event listeners.
     var galleryHTML = document.getElementById("gallery");

@@ -1,170 +1,88 @@
-window.onload = function(e){
-    document.getElementById("signup").addEventListener("submit", function(event){
-        buildAccount(event)
-    });
+window.onload = function(){
+    //disable default form validation
+    document.getElementById("signup").noValidate = true;
+
+    //add an event listener
+    document.getElementById("signup").addEventListener('submit', function(e){
+        //if the account build is successful, then forward to the gallery.
+    	var validForm = buildAccount(e);
+	if (validForm) {
+            console.log("Form Submitted successfully!");
+            window.location = "gallery.html";
+        } else {     	
+	    e.preventDefault();
+        }
+    }, false);
 };
 
-function buildAccount (event){
+//build an account
+function buildAccount (e){
+    //get all the form elements
     var joinForm = document.getElementById("signup");
-    //var name = joinForm.elements.name.value;
-    //var username = joinForm.elements.username.value;
-    //var email = joinForm.elements.email.value;
 
+    //start valid form counter
+    var validForms = 0;
+
+    //validate each element
     for (i=0;i<joinForm.elements.length;i+=1){
-        //console.log(joinForm.elements[i]);
-        validate(joinForm.elements[i]);
-    }
+        validForms += validate(joinForm.elements[i]);
+	e.preventDefault();
+    };
 
-    document.cookie = "username=garretts;"; 
+    //subtract 1 from validForms due to submit button
+    validForms -= 1;
 
-    console.log(document.cookie);
+
+    //if all forms are valid, then return true
+    if (validForms === 3){
+    	console.log("All Forms Valid");
+        return true;
+    } else {
+    	console.log(validForms, "Invalid Forms");
+        return false;
+    };
 };
 
+//validate form fields
 function validate (strA){
-    var strB = 'email';
+    var fieldType = strA.getAttribute('name');
+    var fieldValue = document.getElementsByName(fieldType)[0].value;
+   
+    //set initial error state
+    var error = false;
 
-    switch (strB){
+    //validate each fieldtype and error otherwise.
+    switch (fieldType){
         case 'email':
-            console.log("e ", strA);
+            var validEmail = /\S+@\S+\.\S+/;
+	    if (!validEmail.test(fieldValue)){
+                error = true;
+ 	    } 
             break;
         case 'username':
-            console.log(strA);
-           break; 
+            var validUsername = fieldValue;
+	    if (validUsername.length <= 140 && validUsername.length != 0) {
+            } else {
+		error = true;
+	    }
+            break;
         case 'name':
-            console.log(strA);
+            var validName = fieldValue;
+	    if (validName.length <= 140 && validName.length != 0) {
+    	    	document.cookie = "name=" + fieldValue + ";" ; 
+            } else {
+                error = true;
+	    }
+            break;
+        default:
             break;
     };
-}
-
-/*
-var validateType = {
-    name: function(el){
-    },
-    username: function(el){
-    },
-    email: function(el){
-    },
-}
-
-
-(function(){
-    document.forms.register.noValidate = true;
-    $('form').on('submit'), function(e) {
-    var elements = this.elements;
-        var valid = {};
-        var isValid;
-        var isFormValid;
-        for (var i = 0, l = (elements.length - 1); i < l; i += 1) {
-            isValid = validateRequired(elements[i]) && validateTypes(elements[i]);
-            if (!isValid) {
-                showErrorMessage(elements[i]);
-            } else {
-                removeErrorMessage(elements[i]);
-            }
-            valid[elements[i].id] = isValid;
-        }
-
-        if (!validateName()) {
-            showErrorMessage(document.getElementById('name'));
-            valid.name = false;
-        } else {
-            removeErrorMessage(document.getElementById('name'));
-        }
-    
-        if (!validateUsername()) {
-            showErrorMessage(document.getElementById('username'));
-            valid.username = false;
-        } else {
-            removeErrorMessage(document.getElementById('username'));
-        }
-    
-        if (!validateEmail()) {
-            showErrorMessage(document.getElementById('email'));
-            valid.email = false;
-        } else {
-            removeErrorMessage(document.getElementById('email'));
-        }
-    
-        for (var field in valid) {
-            if (!valid[field]){
-                isFormValid = false;
-                break;
-            } 
-            isFormValid = true;
-        }
-        if(!isFormValid){
-            e.preventDefault();
-        }
-});
-
-function validateTypes(el){
-    if (!el.value) return true;
-
-    var type = $(el).data('type') || el.getAttribute('type');
-    if (typeof validateType[type] === 'function') {
-        return validateType[type](el);
+    //alert user with the valid field type.
+    if (error) { 
+        alert("Your " + fieldType + " is invalid.");
+	return 0;
     } else {
-        return true;
-    }
-}
+        return 1;
+    };
 
-function showErrorMessage(el){
-    var $el = $(el);
-    var $errorContainer = $el.siblings('.error');
-    if (!$errorContainer.length) {
-        $errorContainer = $('<span class="error"></span>').insertAfter($el);
-    }
-    $errorContainer.text($(el).data('errorMessage'));
 }
-
-function setErrorMessage(el, messages){
-    $(el).date('errorMessage', message);
-}
-
-function isEmpty(el){
-    return !el.value || el.value === el.placeholder;
-}
-
-function isRequired(el) {
-    return ((typeof el.required === 'boolean') && el.required) || (typeof el.required === 'string');
-}
-
-function validateRequired(el) {
-    if (isRequired(el)){
-        var valid = !isEmpty(el);
-            if (!valid){
-                setErrorMessage(el, 'Field is required');
-            } 
-        return valid;
-    }
-    return true;
-}
-
-function validateName() {
-    var name = document.getElementById('name');
-    var valid = name.value.length <= 140;
-    if (!valid){
-        setErrorMessage(name, 'Your name should not exceed 140 chars');
-    } 
-    return valid;
-}
-
-function validateUsername() {
-    var username = document.getElementById('username');
-    var valid = username.value.length <= 140;
-    if (!valid){
-        setErrorMessage(username, 'Your name should not exceed 140 chars');
-    } 
-    return valid;
-}
-
-function validateEmail() {
-    var email = document.getElementById('email');
-    var valid = email.value.length <= 140;
-    if (!valid){
-        setErrorMessage(email, 'Your name should not exceed 140 chars');
-    } 
-    return valid;
-}
-}());
-*/
