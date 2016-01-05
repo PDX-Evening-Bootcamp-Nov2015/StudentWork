@@ -1,0 +1,12 @@
+var currentFile = 0;
+setInterval(changeBG, 2000);
+
+function changeBG (){
+  currentFile = currentFile + 1;
+  var fileName = "../images/pdxcg_0" + currentFile + ".jpg";
+  var jTron = document.getElementById("jumbotron");
+  console.log(jTron);
+  jTron.style.backgroundImage = "url(" + fileName + ")";
+  console.log(jTron);
+  console.log(fileName);
+};
