@@ -26,8 +26,7 @@ window.onload = function(){
     //click to show the lightbox
     $("img").bind("click", function(event){
         //set the class on the lightbox for all to see
-        console.log($('#image_show').children().children());
-        $('#image_show').children().children().attr('src', event.target.src);
+        $('#image_show li img').attr('src', event.target.src);
         $('#image_show').attr('class', 'display_img'); 
         
     });
