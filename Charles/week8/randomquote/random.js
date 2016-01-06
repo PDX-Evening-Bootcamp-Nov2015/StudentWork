@@ -6,9 +6,10 @@ function pullQuote (){
 var xmlhttp = new XMLHttpRequest ();
 xmlhttp.onreadystatechange = function () {
   if (xmlhttp.status === 200) {
-    quote2 = JSON.parse(xmlhttp.responseText);
-    document.getElementById('test').innerHTML = quote2.quote;
-    console.log(quote2);
+    A = document.getElementById('test').innerHTML
+    quoteJSON = JSON.parse(xmlhttp.responseText);
+    A = quoteJSON.quote;
+
 
   }
 }
