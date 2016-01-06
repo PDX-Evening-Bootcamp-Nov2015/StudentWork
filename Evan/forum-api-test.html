@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Evan's Mock Forum</title>
+    <style media="screen">
+      input, textarea {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Forum</h1>
+      <h2>Brought to you by jQuery and a depricated Google Spreadsheet API</h2>
+    </header>
+    <main>
+      <p>
+        current posts go here:
+      </p>
+      <div class="current-post-list">
+        <span id="loading">
+          loading posts...
+        </span>
+      </div>
+      <div class="form-wrapper">
+        <form class="create-post-form" method="post">
+            <h3>Create new post</h3>
+            <label for="new-post-title">Title: </label>
+            <input id="new-post-title" type="text" name="title" value="">
+            <label for="new-post-body">Body: </label>
+            <textarea id="new-post-body" name="bodytext" rows="8" cols="40" placeholder="body text here"></textarea>
+            <input type="submit" name="submit" value="create post">
+        </form>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="forum.js" type="text/javascript"></script>
+  </body>
+</html>
