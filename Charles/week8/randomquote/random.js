@@ -7,7 +7,8 @@ var xmlhttp = new XMLHttpRequest ();
 var quoteDisplay = document.getElementById('test');
 xmlhttp.onreadystatechange = function () {
   if (xmlhttp.status === 200) {
-    quoteDisplay.innerHTML = JSON.parse(xmlhttp.responseText);
+    quote = JSON.parse(xmlhttp.responseText);
+    console.log(quote);
 
   }
 }
