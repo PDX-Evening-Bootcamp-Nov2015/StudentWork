@@ -4,8 +4,8 @@ window.onload = function (){
 
 function pullQuote (){
 var xmlhttp = new XMLHttpRequest ();
-var quoteDisplay = document.getElementById('quote1');
 xmlhttp.onreadystatechange = function () {
+  var quoteDisplay = document.getElementById('test');
   if (xmlhttp.status === 200) {
     quote2 = JSON.parse(xmlhttp.responseText);
     quoteDisplay = quote2.quote;
