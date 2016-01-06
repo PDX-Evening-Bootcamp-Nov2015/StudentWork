@@ -20,7 +20,8 @@ $(function () {
         var postObj = {title: title, bodytext: bodytext};
         addPost($postList, postObj);
       })
-      .fail(function () {
+      .fail(function (response) {
+        console.log(response);
         console.log("error during post request");
       })
       .always(function () {
