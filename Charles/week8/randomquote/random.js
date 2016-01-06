@@ -1,4 +1,4 @@
-var xmlhttp = new XMLHtppRequest ();
+var xmlhttp = new XMLHttpRequest ();
 var url = "http://54.68.253.162/StudentWork/api-3.0.json";
 
 xmlhttp.onreadystagechange = function () {
