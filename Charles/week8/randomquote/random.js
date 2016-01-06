@@ -9,6 +9,8 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function pullQuote (){
+  xmlhttp.onreadystagechange;
+  console.log("test3");
 
 xmlhttp.onreadystagechange = function () {
   if (xmlhttp.status === 200) {
@@ -17,4 +19,3 @@ xmlhttp.onreadystagechange = function () {
   }
 }
 }
-console.log("test2");
