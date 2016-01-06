@@ -5,5 +5,6 @@ xmlhttp.onreadystagechange = function () {
   if (xmlhttp.status === 200) {
     var quote = JSON.parse(xmlhttp.responseText);
     console.log(quote);
+    console.log("test");
   }
 }
