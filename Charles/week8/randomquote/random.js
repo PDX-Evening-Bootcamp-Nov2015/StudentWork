@@ -1,6 +1,6 @@
 window.onload = function (){
   pullQuote();
-  document.getElementById('newQuote')addEventListener('click', pullQuote);
+  document.getElementById('newQuote').addEventListener('click', pullQuote);
 }
 
 function pullQuote (event){
