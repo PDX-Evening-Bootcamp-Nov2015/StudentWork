@@ -6,7 +6,7 @@ $(function () {
       evt.preventDefault();
       var $form = evt.data.$form;
       var title = $form.find('#new-post-title').val();
-      var bodytext = $form.find('new-post-body').val();
+      var bodytext = $form.find('#new-post-body').val();
       $.ajax({
         url: "https://docs.google.com/forms/d/13VwG7osI2qVSGPTw8Dl2LICxUzAi3DwACfkTW5I1ocM/formResponse",
         method: "POST",
