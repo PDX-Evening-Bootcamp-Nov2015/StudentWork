@@ -9,6 +9,7 @@ $(function () {
       var bodytext = $form.find('new-post-body').val();
       $.ajax({
         url: "https://docs.google.com/forms/d/13VwG7osI2qVSGPTw8Dl2LICxUzAi3DwACfkTW5I1ocM/formResponse",
+        method: "POST",
         dataType: "xml",
         data: {
           "entry_1358166143": title,
