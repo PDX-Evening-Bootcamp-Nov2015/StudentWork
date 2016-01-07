@@ -7,7 +7,7 @@ function pullQuote (event){
 var xmlhttp = new XMLHttpRequest ();
 xmlhttp.onreadystatechange = function () {
   if (xmlhttp.status === 200) {
-    quoteJSON = JSON.parse(xmlhttp.responseText);
+    quoteJSON = JSON(xmlhttp.responseText);
     console.log(quoteJSON);
   }
 }
