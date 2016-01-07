@@ -6,11 +6,9 @@ function pullQuote (){
 var xmlhttp = new XMLHttpRequest ();
 xmlhttp.onreadystatechange = function () {
   if (xmlhttp.status === 200) {
-    A = document.getElementById('test');
+    A = document.getElementById('quote');
     quoteJSON = JSON.parse(xmlhttp.responseText);
     A.innerHTML = quoteJSON.quote;
-
-
   }
 }
 xmlhttp.open("GET", "http://54.68.253.162/StudentWork/api-3.0.json", true);
