@@ -6,7 +6,7 @@ $(function () {
       evt.preventDefault();
       var $form = evt.data.$form;
       var title = $form.find('#new-post-title').val();
-      var bodytext = $form.find('new-post-body').val();
+      var bodytext = $form.find('#new-post-body').val();
       $.ajax({
         url: "https://docs.google.com/forms/d/13VwG7osI2qVSGPTw8Dl2LICxUzAi3DwACfkTW5I1ocM/formResponse",
         method: "POST",
@@ -15,19 +15,19 @@ $(function () {
           "entry_1358166143": title,
           "entry_1289920291": bodytext
         }
-      })
-      .done(function (response) {
-        console.log("post request successful");
-        var postObj = {title: title, bodytext: bodytext};
-        addPost($postList, postObj);
-      })
-      .fail(function (response) {
-        console.log(response);
-        console.log("error during post request");
-      })
-      .always(function () {
-        console.log("post completed");
       });
+      // .done(function (response) {
+      //   console.log("post request successful");
+      //   var postObj = {title: title, bodytext: bodytext};
+      //   addPost($postList, postObj);
+      // })
+      // .fail(function (response) {
+      //   console.log(response);
+      //   console.log("error during post request");
+      // })
+      // .always(function () {
+      //   console.log("post completed");
+      // });
     }
     // takes the text content of a post and returns it as an object
     function parsePostObject(postString) {
