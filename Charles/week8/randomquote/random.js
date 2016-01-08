@@ -1,4 +1,3 @@
-headers('Content-Type: application/json');
 window.onload = function (){
   pullQuote();
   document.getElementById('newQuote').addEventListener('click', pullQuote);
@@ -7,7 +6,7 @@ window.onload = function (){
 function pullQuote (event){
 var xmlhttp = new XMLHttpRequest ();
 xmlhttp.onreadystatechange = function () {
-  if (xmlhttp.status === 200) {
+  if (xmlhttp.status === 200 && xmlhttp.readyState ===4) {
     quoteS = JSON.parse(xmlhttp.responseText);
     document.getElementById('quote1').innerHTML = quoteS.quote;
     document.getElementById('author').innerHTML = quoteS.author;
