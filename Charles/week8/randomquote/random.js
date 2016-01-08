@@ -1,3 +1,4 @@
+headers('Content-Type: application/json');
 window.onload = function (){
   pullQuote();
   document.getElementById('newQuote').addEventListener('click', pullQuote);
