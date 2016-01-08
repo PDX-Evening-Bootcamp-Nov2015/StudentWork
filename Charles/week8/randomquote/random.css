@@ -15,7 +15,5 @@
 }
 
 #credit {
-  height:10%;
-  position:absolute;
-   bottom:0px;
+  bottom: auto|length|initial|inherit;
 }
