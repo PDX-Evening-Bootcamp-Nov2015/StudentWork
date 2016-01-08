@@ -1,5 +1,6 @@
 .bround {
   border-radius: 1em;
+  color: white;
   background: url('6961094951_a35c7031a2_n.jpg') no-repeat 0 0 scroll;
   background-size: 100% 100%;
   height:50em;
@@ -15,5 +16,5 @@
 }
 
 #credit {
-  bottom: auto|length|initial|inherit;
+   bottom: 1px || auto || inherit;
 }
