@@ -12,6 +12,6 @@ xmlhttp.onreadystatechange = function () {
     document.getElementById('author').innerHTML = quoteJSON.author;
   }
 }
-//xmlhttp.open("GET", "http://54.68.253.162/StudentWork/api-3.0.json", true);
+xmlhttp.open("GET", "http://54.68.253.162/StudentWork/api-3.0.json", true);
 xmlhttp.send();
 }
