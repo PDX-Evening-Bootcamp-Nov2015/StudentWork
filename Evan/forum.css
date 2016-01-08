@@ -4,7 +4,6 @@
 }
 
 body {
-  padding-left: 3em;
   background-color: #000;
   color: #FBDC12;
   font-family: Arial, sans-serif;
@@ -14,7 +13,9 @@ header {
   text-align: center;
   margin: 3em 0;
 }
-
+main {
+  margin-bottom: 200px;
+}
 input, textarea {
   display: block;
 }
@@ -35,6 +36,7 @@ input, textarea {
   padding: 15px;
   margin-top: 30px;
   border-radius: 5px;
+  min-width: 300px;
 }
 
 .post:nth-child(even) {
@@ -68,5 +70,25 @@ input {
 }
 
 input[type="submit"] {
+  border-radius: 3px;
   padding: 0.5em;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 10px #FFF;
+}
+
+@media (max-width: 720px) {
+  img {
+    width: 350px;
+  }
+  header h2,
+  textarea {
+    width: 300px;
+  }
+  header h2 {
+    display: inline-block;
+    font-size: 1em;
+  }
 }
