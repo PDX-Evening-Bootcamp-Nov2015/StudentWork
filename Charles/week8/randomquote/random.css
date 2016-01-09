@@ -27,6 +27,7 @@ h2 {
 }
 
 .foot {
+  margin-left: 1em;
   position: absolute;
   bottom: 0;
 }
