@@ -15,19 +15,16 @@ $(function () {
           "entry_1358166143": title,
           "entry_1289920291": bodytext
         }
+      })
+      .done(function (response) {
+        // console.log("post request successful");
+      })
+      .fail(function (response) {
+        // console.log(response);
+        // console.log("error during post request");
+        var postObj = {title: title, bodytext: bodytext};
+        addPost($postList, postObj);
       });
-      // .done(function (response) {
-      //   console.log("post request successful");
-      //   var postObj = {title: title, bodytext: bodytext};
-      //   addPost($postList, postObj);
-      // })
-      // .fail(function (response) {
-      //   console.log(response);
-      //   console.log("error during post request");
-      // })
-      // .always(function () {
-      //   console.log("post completed");
-      // });
     }
     // takes the text content of a post and returns it as an object
     function parsePostObject(postString) {
