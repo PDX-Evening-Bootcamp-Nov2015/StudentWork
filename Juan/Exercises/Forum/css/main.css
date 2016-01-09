@@ -102,7 +102,9 @@ input:focus, textarea:focus {
   /* second part of accordion animation */
   max-height: 0;
 }
-
+.fade_in {
+  animation: fade_in 7s 1;
+}
 /* background color loading fade-in */
 /*@keyframes background_load {
   0% {background-color: rgba(0,0,0,1);}
@@ -110,3 +112,8 @@ input:focus, textarea:focus {
   50% {background-color: rgba(0,0,0,0.75);}
   100% {background-color: rgba(0,0,0,0);}
 }*/
+
+@keyframes fade_in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
