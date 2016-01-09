@@ -1,6 +1,6 @@
 .bround {
+  position: relative;
   border-radius: 1em;
-  color: white;
   background: url('6961094951_a35c7031a2_n.jpg') no-repeat 0 0 scroll;
   background-size: 100% 100%;
   height:50em;
@@ -8,6 +8,11 @@
 }
 .text {
   margin-left: 2em;
+  color: #C1E4E8;
+}
+
+h2 {
+  margin: 0px;
 }
 
 .body {
@@ -16,5 +21,12 @@
 }
 
 .credit {
-   margin-bottom: 1em;
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
+.foot {
+  position: absolute;
+  bottom: 0;
 }
