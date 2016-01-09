@@ -6,7 +6,6 @@ Required functionality:
  - get posts
  - send posts
  - display posts
-Optional
 */
 
 /* function to populate page with posts */
@@ -19,7 +18,8 @@ function populate(allPosts) {
   for (var i = 0; i < totalPosts; i++) {
     var postTitle = allPosts[i].gsx$title.$t, // cache post title
         postText = allPosts[i].gsx$bodytext.$t, // cache post body
-        $newDiv = $('<div>').attr('id', i); // create new div for post
+        attributes = {'id': i, 'class': 'post'},
+        $newDiv = $('<div>').attr(attributes); // create new div for post
     $newDiv.append($('<h3>').html(postTitle)); // populate new div with title
     $newDiv.append($('<p>').html(postText)); // populate new div with body text
     $postArea.prepend($newDiv); // add completed post to the page
@@ -47,7 +47,6 @@ function getPosts() {
       alert("Failed to load forum posts. Sad face.");
     }
   );
-
 }
 
 /* function to make POST requests for new posts */
@@ -76,9 +75,21 @@ function formSubmit(evt) {
   $postText.val('');
 }
 
+/* display or hide new post form */
+function showForm(evt) {
+  if($('.new_post').hasClass('no_height')) {
+    $('.new_post').removeClass('no_height');
+  } else {
+    $('.new_post').addClass('no_height');
+  }
+}
+
+
 /* page load functions */
 $(function(){
-  var $postButton = $('#make_post');
+  var $postButton = $('#make_post'),
+      $formRevealButton = $('#form_reveal');
   getPosts(); // pull existing posts and populate page
   $postButton.click(formSubmit); // tie to form submission actions
+  $formRevealButton.click(showForm);
 });
