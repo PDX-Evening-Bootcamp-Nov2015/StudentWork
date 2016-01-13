@@ -3,7 +3,7 @@
 // will modify the css for the .jumbotron element
 
 // function to change the css background image target of an element
-function backImgChng(target, num) {
+function backImgChng($target, num) {
   // num is image number, image is targeted dom element, numstring is conversion
   var numstring;
   // oh noes, we're missing an image! Lets fix that problem
@@ -17,21 +17,21 @@ function backImgChng(target, num) {
     numstring = '0' + numstring;
   }
   // change the image with css
-  target.css('background-image', 'url("images/pdxcg_' + numstring + '.jpg")');
+  $target.css('background-image', 'url("images/pdxcg_' + numstring + '.jpg")');
 }
 
 // loop function to select image and call change function every 10 seconds
 function imageSelector() {
   var imgNum = 1, // set initial image value
       totImg = 60, // store the highest image number
-      jumbotron = $('.jumbotron');
+      $jumbotron = $('.jumbotron');
   // select a new number and call the image change function every 10 seconds
   window.setInterval(function() {
     imgNum++;
     if (imgNum > totImg) {
       imgNum = 1;
     }
-    backImgChng(jumbotron, imgNum);
+    backImgChng($jumbotron, imgNum);
   }, 10000);
 }
 
