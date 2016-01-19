@@ -1,4 +1,4 @@
-# Javapic
+# Javapic 1
 _"You're beautiful" is our slogan, and our website reflects that. Help get our Javascript there._
 
 Students have been 'hired' to add functionality to the Javapic website (no, it doesn't pay). The photo gallery site has a landing page that needs a rotating background image in the jumbotron. If users want to see the images in the gallery, they need to join the site via the sign-up form. Once they've signed up, they can see the photo gallery, and select click a photo to see a larger version of it.
