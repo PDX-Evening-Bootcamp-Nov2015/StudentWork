@@ -18,8 +18,8 @@ $("#submit").click(function (event) {
        if ($.trim(name) === "") {
          $("#namemessage").remove();
          $("<div id='namemessage'>Please enter your name</div>").insertAfter("[placeholder='name']");
+         $("#namemessage").css( "color", "red" );
          test.name1 = 0;
-         console.log("name")
    }  else if ($.trim(name) != ""){
          $("#namemessage").remove();
          test.name1 = 1;
@@ -27,8 +27,8 @@ $("#submit").click(function (event) {
       if ($.trim(username) === "") {
          $("#usernamemessage").remove();
          $("<div id='usernamemessage'>Please enter your username</div>").insertAfter("[placeholder='username']");
+         $("#usernamemessage").css( "color", "red" );
          test.username1 = 0;
-         console.log("username")
    }  else if ($.trim(username) != ""){
          $("#usernamemessage").remove();
          test.username1 = 1;
@@ -36,10 +36,10 @@ $("#submit").click(function (event) {
       if ($.trim(email) === "" || testEmail(email) === false ) {
        $( "#emailmessage" ).remove();
        $("<div id='emailmessage'>Please enter your email</div>").insertAfter("[placeholder='youremail@place.com']");
+       $("#emailmessage").css( "color", "red" );
        test.email1 = 0;
-       console.log("email")
    }  else if (testEmail(email) === true){
-         $("#usernamemessage").remove();
+         $("#emailmessage").remove();
          test.email1 = 1;
    }
       if (test.name1 === 1 && test.username1 === 1 && test.email1 === 1){
