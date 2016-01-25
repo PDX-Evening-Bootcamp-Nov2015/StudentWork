@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+//function creates a list of all images in the /images folder and returns
+//an array named imageList
 function addImages() {
   var imageList = []
   for (i = 10; i < 61; i++){
@@ -16,6 +18,7 @@ var images = addImages();
 
 rotateJumbotron();
 
+//function modifies the css background-image and replaces the image every ten seconds
 function rotateJumbotron (){
   imgNumber = 0;
   maxNumber = images.length;
@@ -31,6 +34,5 @@ function rotateJumbotron (){
   }, 10000)
 
 
-  }
-
+ }
 });
